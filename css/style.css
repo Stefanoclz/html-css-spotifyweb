@@ -4,13 +4,11 @@
     padding: 0;
 }
 
-main {
-    background-color: #141922;
-}
-
 li {
     list-style: none;
 }
+
+/* Inizio colonna Aside */
 
 .aside {
     position: fixed;
@@ -31,4 +29,38 @@ li {
 
 .aside * {
     padding: 2% 10% 2% 2%;
+}
+
+.aside p {
+    border-bottom: 1px solid grey;
+}
+
+/* / Colonna Aside */
+
+.mainContent {
+    background-color: #141922;
+}
+
+/* Inizio Upgrade */
+
+.upgrade {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.upgrade a {
+    font-size: 15px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15%;
+    padding: 7px 10px;
+    text-decoration: none;
+    text-align: center;
+    margin: 1% 2% 2%;
 }
