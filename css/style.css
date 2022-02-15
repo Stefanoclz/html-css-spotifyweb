@@ -3,3 +3,32 @@
     margin: 0;
     padding: 0;
 }
+
+main {
+    background-color: #141922;
+}
+
+li {
+    list-style: none;
+}
+
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    width: 15vw;
+}
+
+.aside img {
+    width: 100%;
+}
+
+.aside * {
+    padding: 2% 10% 2% 2%;
+}
