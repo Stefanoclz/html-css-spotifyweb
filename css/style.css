@@ -2,6 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
 }
 
 li {
@@ -21,6 +30,7 @@ li {
     justify-content: space-between;
     color: white;
     width: 15vw;
+    z-index: 1;
 }
 
 .aside img {
@@ -37,9 +47,6 @@ li {
 
 /* / Colonna Aside */
 
-.mainContent {
-    background-color: #141922;
-}
 
 /* Inizio Upgrade */
 
@@ -48,6 +55,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -55,12 +63,88 @@ li {
 }
 
 .upgrade a {
-    font-size: 15px;
+    font-size: 12px;
     color: white;
     border: 1px solid white;
-    border-radius: 15%;
-    padding: 7px 10px;
+    border-radius: 25px;
+    padding: 10px 30px;
     text-decoration: none;
     text-align: center;
     margin: 1% 2% 2%;
+}
+
+/* / upgrade */
+
+/* Inizio Main Content */
+
+.mainContent {
+    background-color: #141922;
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12vh;
+}
+
+.mainNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainNav a {
+    text-decoration: none;
+    color: #7d7f84;
+    margin: 15px;
+}
+
+.recent {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 20px;
+}
+
+.recent h1 {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.album {
+    width: calc(100% / 6 - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.album img {
+    width: 100%;
+}
+
+.album h3 {
+    margin: 10px 0;
+}
+
+
+
+
+/* Inizio footer */
+
+footer {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #282828;
 }
