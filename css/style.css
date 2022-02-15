@@ -23,7 +23,7 @@ li {
     position: fixed;
     left: 0;
     top: 0;
-    height: 90vh;
+    height: 85vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -80,10 +80,16 @@ li {
 .mainContent {
     background-color: #141922;
     width: 85vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 12vh;
+    color: white;
+    padding-bottom: 10vh;
+}
+
+.mainContent p {
+    color: grey;
+    margin: 10px;
 }
 
 .mainNav {
@@ -99,20 +105,20 @@ li {
     margin: 15px;
 }
 
-.recent {
+.recent, .forUser, .artist {
     display: flex;
     flex-direction: column;
-    color: white;
-    margin: 20px;
+    margin: 20px 30px;
 }
 
 .recent h1 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.row {
+.row-recent {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .album {
@@ -121,7 +127,7 @@ li {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 30px;
+    margin-top: 20px;
 }
 
 .album img {
@@ -129,16 +135,27 @@ li {
 }
 
 .album h3 {
-    margin: 10px 0;
+    margin-top: 20px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
 
+.margin-30 {
+    margin-right: 30px;
+}
+
+.artist img {
+    border-radius: 50%;
+}
 
 
 /* Inizio footer */
 
 footer {
-    height: 10vh;
+    height: 15vh;
     width: 100%;
     position: fixed;
     left: 0;
@@ -146,5 +163,93 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: #282828;
+    padding: 1vh;
+    color: white;
+}
+
+.played {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.songPlayed {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.played img {
+    width: 15%;
+    margin-right: 4%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons i {
+    margin: 0% 30%;
+}
+
+.interaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+
+.buttons i {
+    color: white;
+}
+
+.buttons button {
+    margin-right: 35%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.mainPlay i {
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: scale(1.5);
+    padding: 30%;
+}
+
+.audiobar {
+    width: 100%;
+    height: 5px;
+    background-color: #5a5a5a;
+}
+
+.elapsedAudio {
+    height: 100%;
+    background-color: #c1c1c1;
+}
+
+
+
+
+
+
+
+.volumePanel {
+    display: flex;
+    flex-direction: row;
 }
