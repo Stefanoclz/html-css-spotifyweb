@@ -5,12 +5,15 @@
     font-family: sans-serif;
 }
 
-main {
+body {
     position: relative;
+}
+
+main {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-
+    height: 100vh;
 }
 
 li {
@@ -23,26 +26,103 @@ li {
     position: fixed;
     left: 0;
     top: 0;
-    height: 85vh;
+    height: calc(100vh - 100px);
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: white;
     width: 15vw;
-    z-index: 1;
+    z-index: 2;
 }
 
-.aside img {
-    width: 100%;
+.logo {
+    padding: 8% 8%;
 }
 
-.aside * {
-    padding: 2% 10% 2% 2%;
+.logo img {
+    width: 70%;
 }
+
+.asideNav {
+    margin-bottom: 20px;
+}
+
+.asideNav img {
+    width: 15%;
+    vertical-align: middle;
+    filter: invert(0.5);
+    padding-right: 5px;
+}
+
 
 .aside p {
     border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: grey;
+    font-size: 13px;
+}
+
+.aside a {
+    text-decoration: none;
+    color: grey;
+}
+
+.aside li {
+    margin: 10px 0px;
+    padding-left: 8%;
+}
+
+.playlistHead {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8%;
+}
+
+.playlistHead h4 {
+ margin: 15px 0px;
+}
+
+.playlistButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.playlistHead button {
+    background-color: grey;
+    color: black;
+    font-size: 40px;
+    border: none;
+    padding: 0px 10px;
+    margin-right: 5px;
+}
+
+.playlists li {
+    margin: 20px 0px;
+}
+
+.bottomAside {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+
+.bottomAside p img {
+    width: 8%;
+    margin-right: 5px;
+    filter: invert(0.5);
+    vertical-align: middle;
+}
+
+.bottomAside h4 img {
+    margin-right: 5px;
+    border-radius: 50px;
+    background-color: #5a5a5a;
+    width: 12%;
+    vertical-align: middle;
 }
 
 /* / Colonna Aside */
@@ -56,10 +136,11 @@ li {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .upgrade a {
@@ -84,7 +165,8 @@ li {
     flex-direction: column;
     padding-top: 12vh;
     color: white;
-    padding-bottom: 10vh;
+    padding-bottom: 15vh;
+    overflow-y: auto;
 }
 
 .mainContent p {
@@ -155,9 +237,9 @@ li {
 /* Inizio footer */
 
 footer {
-    height: 15vh;
+    height: 100px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     display: flex;
@@ -167,12 +249,14 @@ footer {
     background-color: #282828;
     padding: 1vh;
     color: white;
+
 }
 
 .played {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 20%;
 }
 
 .songPlayed {
@@ -199,23 +283,27 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 30%;
+    justify-content: center;
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
     margin-bottom: 2%;
+    justify-content: center;
 }
 
 .buttons i {
     color: white;
 }
 
-.buttons button {
-    margin-right: 35%;
+footer button {
+    margin-right: 50%;
     background-color: transparent;
     border: none;
     text-align: center;
+    color: white;
 }
 
 .player {
@@ -223,6 +311,7 @@ footer {
     flex-direction: row;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
 }
 
 .mainPlay i {
@@ -233,7 +322,7 @@ footer {
 }
 
 .audiobar {
-    width: 100%;
+    width: 80%;
     height: 5px;
     background-color: #5a5a5a;
 }
@@ -241,15 +330,29 @@ footer {
 .elapsedAudio {
     height: 100%;
     background-color: #c1c1c1;
+    width: 40%;
 }
-
-
-
-
-
-
 
 .volumePanel {
     display: flex;
     flex-direction: row;
+    width: 20%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.volumePanel button {
+    margin-right: 5%;
+}
+
+.audiobar-small {
+    width: 30%;
+    height: 5px;
+    background-color: #5a5a5a;
+}
+
+.elapsedAudio-small {
+    height: 100%;
+    background-color: #c1c1c1;
+    width: 40%;
 }
