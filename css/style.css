@@ -101,6 +101,10 @@ li {
     margin-right: 10px;
 }
 
+.playlists {
+    height: 50%;
+}
+
 .playlists ul {
     overflow-y: auto;
 }
@@ -718,5 +722,58 @@ footer button {
         background-color: white;
         border-radius: 50%;
         display: none;;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    
+    .played {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .songPlayed {
+        margin-bottom: 5px;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .icons i {
+        margin-right: -4px;
+    }
+
+    .interaction {
+        width: 20%;
+        font-size: 12px;
+    }
+
+    .interaction button {
+        margin: 0 10px;
+    }
+
+    .volumePanel {
+        flex-direction: column-reverse;
+        margin-left: 0;
+        margin-right: 5px;
+        height: auto;
+    }
+
+    .audiobar-small {
+        transform: rotate(0deg);
+        justify-content: flex-start;
+        margin-bottom: 5px;
+        width: 50px;
+    }
+
+    .elapsedAudio-small {
+        justify-content: flex-end;
     }
 }
