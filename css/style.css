@@ -37,7 +37,7 @@ li {
 }
 
 .logo {
-    padding: 8%;
+    padding-top: 8%;
     padding-left: 8%;
     width: 100%;
 }
@@ -388,16 +388,16 @@ footer button {
 }
 
 .circle {
-    width: 8%;
-    height: 300%;
+    width: 15px;
+    height: 15px;
     background-color: white;
     border-radius: 50%;
     display: none;
 }
 
 .circle-small {
-    width: 25%;
-    height: 200%;
+    width: 10px;
+    height: 10px;
     background-color: white;
     border-radius: 50%;
     display: none;
@@ -455,6 +455,10 @@ footer button {
 
 .aside a:hover img {
     filter: invert(0);
+}
+
+.asideNav li:active {
+    border-left: 1px solid yellow;
 }
 
 .playlistButton button:hover {
@@ -559,15 +563,19 @@ footer button {
 
 @media screen and (max-width: 480px) {
     
+    .aside {
+        align-items: center;
+    }
+
     .logo img {
         display: none;
     }
 
     .logo {
         content: url(../img/logo-small.svg);
-        width: 45px;
-        padding-left: 8%;
-        padding-bottom: 2px;
+        width: 35px;    
+        margin-left: 3px; 
+        margin-top: 5px;  
     }
 
     .asideNav a {
@@ -576,20 +584,26 @@ footer button {
 
     .asideNav li:nth-child(1) {
         content: url(../img/home.svg);
-        width: 45px;
+        width: 35px;
         filter: invert(0.5);
+        margin-left: 4px; 
+        padding: 0;
     }
 
     .asideNav li:nth-child(2) {
         content: url(../img/search.svg);
-        width: 45px;
+        width: 35px;
         filter: invert(0.5);
+        margin-left: 4px;
+        padding: 0;
     }
 
     .asideNav li:nth-child(3) {
         content: url(../img/libreria.svg);
-        width: 45px;
+        width: 35px;
         filter: invert(0.5);
+        margin-left: 4px; 
+        padding: 0;
     }
 
     .asideNav li {
