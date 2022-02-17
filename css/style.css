@@ -223,17 +223,8 @@ li {
     position: relative;
 }
 
-.playAlbum {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 65%;
-    display: none;
-}
 
-.playAlbum i {
+.album i {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -242,6 +233,7 @@ li {
     border: 5px solid white;
     border-radius: 50%;
     padding: 3% 3% 3% 4%;
+    display: none;
 }
 
 .album img {
@@ -328,6 +320,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 30%;
+    min-width: 180px;
     justify-content: center;
 }
 
@@ -340,7 +333,7 @@ footer {
 }
 
 .interaction button {
-    margin: 0 15px;
+    margin: 0 13px;
 }
 
 .buttons i {
@@ -378,6 +371,7 @@ footer button {
     width: 80%;
     height: 5px;
     background-color: #5a5a5a;
+    margin: 0px 5px;
 }
 
 .elapsedAudio {
@@ -412,6 +406,7 @@ footer button {
     width: 20%;
     justify-content: flex-end;
     align-items: center;
+    margin-left: 20px;
 }
 
 .volumePanel button {
@@ -420,6 +415,7 @@ footer button {
 
 .audiobar-small {
     width: 30%;
+    min-width: 30px;
     height: 5px;
     background-color: #5a5a5a;
 }
@@ -543,5 +539,133 @@ footer button {
     .icons {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .footer {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .logo img {
+        display: none;
+    }
+
+    .logo {
+        content: url(../img/logo-small.svg);
+        width: 45px;
+        padding-left: 8%;
+        padding-bottom: 2px;
+    }
+
+    .asideNav a {
+        display: none;
+    }
+
+    .asideNav li:nth-child(1) {
+        content: url(../img/home.svg);
+        width: 45px;
+        filter: invert(0.5);
+    }
+
+    .asideNav li:nth-child(2) {
+        content: url(../img/search.svg);
+        width: 45px;
+        filter: invert(0.5);
+    }
+
+    .asideNav li:nth-child(3) {
+        content: url(../img/libreria.svg);
+        width: 45px;
+        filter: invert(0.5);
+    }
+
+    .asideNav li {
+        margin: 5px 0px;
+    }
+
+    .playlistHead, .playlists {
+        display: none;
+    }
+
+    .download p, .profile h4 {
+        display: none;
+    }
+
+    .download {
+        display: flex;
+        align-items: center;
+        content: url(../img/download.svg);
+        width: 18px;
+        margin: 0px 0 15px 0px;
+        filter: invert(0.5);
+        vertical-align: middle;
+        padding: 0;
+    }
+    
+    .profile {
+        text-align: center;
+        content: url(../img/profile.svg);
+        width: 20px;
+        border-radius: 50px;
+        background-color: #5a5a5a;
+        vertical-align: middle;
+    }
+
+    .aside {
+        width: 50px;
+    }
+
+    .mainContent {
+        width: calc(100% - 50px);
+    }
+
+    .bottomAside {
+        align-items: center;
+        padding: 0;
+        margin: 5px 0;
+    }
+    
+    .played img {
+        width: 30px;
+    }
+
+    .footer {
+        justify-content: flex-start;
+    }
+
+    .icons {
+        margin-right: 20px;
+    }
+
+    .songPlayed {
+        margin: 0;
+    }
+
+    .played {
+        width: auto;
+    }
+
+    .interaction {
+        width: auto;
+    }
+
+    .volumePanel {
+        width: auto;
+        height: 100%;
+    }
+
+    .audiobar-small {
+        width: 5px;
+        height: 100%;
+        height: 5px;
+        background-color: #5a5a5a;
+    }
+    
+    .elapsedAudio-small {
+        height: 40%;
+        background-color: #c1c1c1;
+        width: 100%;
     }
 }
